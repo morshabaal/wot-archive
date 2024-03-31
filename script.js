@@ -4,7 +4,7 @@ const data = await file.json();
 
 // add event listener
 document.getElementById("btnSearch").addEventListener("click", (e) => {
-    const query = document.getElementById("search").value.trim().toLowerCase();
+    const query = document.getElementById("search").value.toLowerCase();
     const searchOption = document.querySelector('input[name="searchOption"]:checked').value;
 
     const results = data.flat().filter(post => {
