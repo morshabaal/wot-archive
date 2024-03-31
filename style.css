@@ -1,0 +1,50 @@
+#results {
+    margin-top: 1rem;
+}
+
+body, div {
+    font: 11px verdana, arial, sans-serif;
+}
+
+.post {
+    border: 1px solid silver;
+    padding: 1px;
+    margin-bottom: 16px;
+}
+
+.posttop {
+    padding: 4px;
+    background: #EEEEEE;
+}
+
+.thread {
+    font-weight: bold;
+    clear:both;
+    padding: 0.5rem;
+    background-color: #333333;
+    color: rgb(204, 187, 119);
+}
+
+.thread a {
+    color: silver;
+}
+
+.thread span {
+    margin-left: 0.25rem;
+}
+
+.username {
+    font-weight: bold;
+    width: auto;
+    float: left;
+}
+
+.date {
+    width: auto;
+    text-align: right;
+}
+
+.posttext {
+    padding: 4px;
+    background: #F9F9F9;
+}

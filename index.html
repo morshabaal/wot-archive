@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Tibia Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to the World of Tibia archive!</h1>
+    <p>This website contains an archive of <strong>129,399</strong> forum posts, from <strong>14,071</strong> forum threads. This archive was made by using the CDX API from the Internet Archive ("Wayback Machine"). The URL used was "tibia.gamigo.de". World of Tibia used many different domains, such as "tibia.de" and "tibia.looki.de". Because of convenience, I kept to the "tibia.gamigo.de" domain and I found it had the most archived content.</p>
+    <p>The "World of Tibia archive" was made by <strong>cyph3rjo3/morshabaal</strong> on 31st of March 2024.</p>
+
+    <p>Use the very primitive search feature below. <strong>Be careful of lag!</strong></p><p>The search function is not optimized in any way. If you search for an empty string, it will return all results and be very laggy. Try be as specific as possible while searching!</p>
+
+    <fieldset>
+        <legend>Search Archive</legend>
+        <input type="radio" id="searchContent" name="searchOption" value="content" checked>
+        <label for="searchContent">Search Content</label>
+        <input type="radio" id="searchAuthor" name="searchOption" value="author">
+        <label for="searchAuthor">Search Author</label>
+        <br><br>
+        <input type="text" id="search" placeholder="Search for content...">
+        <button type="button" id="btnSearch">Search</button>
+    </fieldset>
+    
+    <div id="results"></div>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
