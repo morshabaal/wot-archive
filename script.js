@@ -10,13 +10,16 @@ document.getElementById("btnSearch").addEventListener("click", (e) => {
 
     const results = data.flat().filter(post => {
         let target;
-        
         if (searchOption === "content") target = post.content.toLowerCase();
         else if (searchOption === "author") target = post.author.toLowerCase();
         else if (searchOption === "title") target = post.threadTitle.toLowerCase();
 
         if (exactMatch) {
-            return target === query;
+            if (searchOption === "author") {
+                return target === query;
+            } else {
+                return target.split(/\s+/).includes(query);
+            }
         } else {
             return target.includes(query);
         }
