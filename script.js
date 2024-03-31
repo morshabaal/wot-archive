@@ -10,6 +10,7 @@ document.getElementById("btnSearch").addEventListener("click", (e) => {
     const results = data.flat().filter(post => {
         if (searchOption === "content") return post.content.toLowerCase().includes(query);
         else if (searchOption === "author") return post.author.toLowerCase().includes(query);
+        else if (searchOption === "title") return post.threadTitle.toLowerCase().includes(query);
     });
 
     // Sort results by the "datePosted" column
