@@ -6,11 +6,20 @@ const data = await file.json();
 document.getElementById("btnSearch").addEventListener("click", (e) => {
     const query = document.getElementById("search").value.toLowerCase();
     const searchOption = document.querySelector('input[name="searchOption"]:checked').value;
+    const exactMatch = document.getElementById("exactMatchCheckbox").checked;
 
     const results = data.flat().filter(post => {
-        if (searchOption === "content") return post.content.toLowerCase().includes(query);
-        else if (searchOption === "author") return post.author.toLowerCase().includes(query);
-        else if (searchOption === "title") return post.threadTitle.toLowerCase().includes(query);
+        let target;
+        
+        if (searchOption === "content") target = post.content.toLowerCase();
+        else if (searchOption === "author") target = post.author.toLowerCase();
+        else if (searchOption === "title") target = post.threadTitle.toLowerCase();
+
+        if (exactMatch) {
+            return target === query;
+        } else {
+            return target.includes(query);
+        }
     });
 
     // clear previous results
